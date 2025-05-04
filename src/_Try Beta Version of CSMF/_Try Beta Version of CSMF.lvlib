@@ -28,4 +28,5 @@
 	<Item Name="Reorder 1D Array-VIM.vim" Type="VI" URL="../Reorder 1D Array-VIM.vim"/>
 	<Item Name="Search 1D Array-VIM.vim" Type="VI" URL="../Search 1D Array-VIM.vim"/>
 	<Item Name="Sort 1D Array-VIM.vim" Type="VI" URL="../Sort 1D Array-VIM.vim"/>
+	<Item Name="Select Dialog.vi" Type="VI" URL="../Select Dialog.vi"/>
 </Library>
