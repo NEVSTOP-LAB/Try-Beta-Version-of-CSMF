@@ -10,18 +10,11 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="_Try Beta Version of CSMF.lvlib" Type="Library" URL="../src/_Try Beta Version of CSMF/_Try Beta Version of CSMF.lvlib"/>
-		<Item Name="Try Beta Version of CSMF.vi" Type="VI" URL="../src/Try Beta Version of CSMF.vi"/>
+		<Item Name="src" Type="Folder" URL="../src">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="Try Beta Version of CSMF.vipb" Type="Document" URL="../Try Beta Version of CSMF.vipb"/>
 		<Item Name="Dependencies" Type="Dependencies">
-			<Item Name="user.lib" Type="Folder">
-				<Item Name="Delete Elements from Array-VIM_Hooovahh.vim" Type="VI" URL="/&lt;userlib&gt;/_Hooovahh/Array VIMs/OpenG/Delete Elements from Array-VIM_Hooovahh.vim"/>
-				<Item Name="Filter 1D Array-VIM_Hooovahh.vim" Type="VI" URL="/&lt;userlib&gt;/_Hooovahh/Array VIMs/OpenG/Filter 1D Array-VIM_Hooovahh.vim"/>
-				<Item Name="Index 1D Array Elements_Hooovahh.vim" Type="VI" URL="/&lt;userlib&gt;/_Hooovahh/Array VIMs/OpenG/Index 1D Array Elements_Hooovahh.vim"/>
-				<Item Name="Remove Duplicates from 1D Array-VIM_Hooovahh.vim" Type="VI" URL="/&lt;userlib&gt;/_Hooovahh/Array VIMs/OpenG/Remove Duplicates from 1D Array-VIM_Hooovahh.vim"/>
-				<Item Name="Reorder 1D Array-VIM_Hooovahh.vim" Type="VI" URL="/&lt;userlib&gt;/_Hooovahh/Array VIMs/OpenG/Reorder 1D Array-VIM_Hooovahh.vim"/>
-				<Item Name="Search 1D Array-VIM_Hooovahh.vim" Type="VI" URL="/&lt;userlib&gt;/_Hooovahh/Array VIMs/OpenG/Search 1D Array-VIM_Hooovahh.vim"/>
-				<Item Name="Sort 1D Array-VIM_Hooovahh.vim" Type="VI" URL="/&lt;userlib&gt;/_Hooovahh/Array VIMs/OpenG/Sort 1D Array-VIM_Hooovahh.vim"/>
-			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="1D Array to String__ogtkDDA31ED5A732916949AA00FDC27B02BA.vi" Type="VI" URL="/&lt;vilib&gt;/JKI/_VIPM API_internal_deps/1D Array to String__ogtkDDA31ED5A732916949AA00FDC27B02BA.vi"/>
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -117,7 +110,6 @@
 				<Item Name="VIPM API_vipm_api.lvlib" Type="Library" URL="/&lt;vilib&gt;/JKI/VIPM API/VIPM API_vipm_api.lvlib"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="FTP_UpgradeCSMF.lvlib" Type="Library" URL="../src/_Try Beta Version of CSMF/FTP/FTP_UpgradeCSMF.lvlib"/>
 			<Item Name="System" Type="VI" URL="System">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>

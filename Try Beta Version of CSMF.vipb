@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-05-04 22:31:46" Creator="liyao" Comments="" ID="fca8aaeeb1d9f7c4ee9843c28d480006">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-05-04 23:33:35" Creator="liyao" Comments="" ID="278fe8633441f6107ae29e0d70db759d">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_tool_Try_Beta_Version_of_CSMF</Package_File_Name>
     <Library_Version>2025.5.0.1</Library_Version>
@@ -17,7 +17,6 @@
   </Library_General_Settings>
   <Advanced_Settings>
     <Package_Dependencies>
-      <Additional_External_Dependencies>hooovahh_array_vims &gt;=3.1.1.22</Additional_External_Dependencies>
       <Additional_External_Dependencies>jki_lib_vipm_api &gt;=2020.0.3.80</Additional_External_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
