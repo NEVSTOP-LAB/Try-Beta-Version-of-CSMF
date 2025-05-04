@@ -29,8 +29,7 @@ jobs:
         with:
           LabVIEW_Version: 2017
           # Package could be PackageName/PacakgeWithVersion/vipFilePath
-          Package: "Hooovahh Array VIMs"
-          Package1: "VIPM API"
+          Package: "VIPM API"
 
       # Runs a set of commands using the runners shell
       - id: Check_Broken_VIs
