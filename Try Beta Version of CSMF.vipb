@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-09-25 21:22:13" Creator="liyao" Comments="" ID="75dc0c420081da2b99b1c5b6e8394eb3">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-07-21 22:06:29" Creator="liyao" Comments="" ID="0da76d4889b4ce63c6e8f88766736a26">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_tool_Try_Beta_Version_of_CSMF</Package_File_Name>
     <Library_Version>2025.9.0.1</Library_Version>
@@ -29,8 +29,8 @@
     </Custom_Action_VIs>
     <VI_Package_Configuration_File>Try Beta Version of CSMF.vipc</VI_Package_Configuration_File>
     <Description>
-      <One_Line_Description_Summary/>
-      <Description/>
+      <One_Line_Description_Summary>This tool is used to install beta version of CSM framework automatically, you need to activate VIPM to community/pro version firstly.</One_Line_Description_Summary>
+      <Description>Windows Only, as VIPM API required.</Description>
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
@@ -170,8 +170,8 @@
       <Windows_7>true</Windows_7>
       <Windows_Vista>true</Windows_Vista>
       <Windows_XP>true</Windows_XP>
-      <Mac_OS>true</Mac_OS>
-      <Linux>true</Linux>
+      <Mac_OS>false</Mac_OS>
+      <Linux>false</Linux>
       <Built_LV_Version>false</Built_LV_Version>
       <Built_LV_Version_or_greater>true</Built_LV_Version_or_greater>
       <Windows_8>true</Windows_8>
