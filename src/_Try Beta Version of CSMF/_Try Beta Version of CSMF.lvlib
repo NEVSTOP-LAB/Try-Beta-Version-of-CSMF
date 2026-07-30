@@ -12,22 +12,28 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
-	<Item Name="1D Array to String.vi" Type="VI" URL="../1D Array to String.vi"/>
-	<Item Name="String to 1D Array.vi" Type="VI" URL="../String to 1D Array.vi"/>
-	<Item Name="Close Caller FP if In LabVIEW folder.vi" Type="VI" URL="../Close Caller FP if In LabVIEW folder.vi"/>
-	<Item Name="DownloadPackageFromFTP.vi" Type="VI" URL="../DownloadPackageFromFTP.vi"/>
-	<Item Name="DownloadPackageFromNevstopFTP.vi" Type="VI" URL="../DownloadPackageFromNevstopFTP.vi"/>
-	<Item Name="FilterOthersExceptFile.vi" Type="VI" URL="../FilterOthersExceptFile.vi"/>
-	<Item Name="relativeListResultToAbsolute.vi" Type="VI" URL="../relativeListResultToAbsolute.vi"/>
-	<Item Name="Sort descending by Version.vi" Type="VI" URL="../Sort descending by Version.vi"/>
-	<Item Name="spliteFTPpathLeaf.vi" Type="VI" URL="../spliteFTPpathLeaf.vi"/>
-	<Item Name="vipm_InstallPackages.vi" Type="VI" URL="../vipm_InstallPackages.vi"/>
-	<Item Name="vipm_target_version.vi" Type="VI" URL="../vipm_target_version.vi"/>
-	<Item Name="Delete Elements from Array-VIM.vim" Type="VI" URL="../Delete Elements from Array-VIM.vim"/>
-	<Item Name="Filter 1D Array-VIM.vim" Type="VI" URL="../Filter 1D Array-VIM.vim"/>
-	<Item Name="Remove Duplicates from 1D Array-VIM.vim" Type="VI" URL="../Remove Duplicates from 1D Array-VIM.vim"/>
-	<Item Name="Reorder 1D Array-VIM.vim" Type="VI" URL="../Reorder 1D Array-VIM.vim"/>
-	<Item Name="Search 1D Array-VIM.vim" Type="VI" URL="../Search 1D Array-VIM.vim"/>
-	<Item Name="Sort 1D Array-VIM.vim" Type="VI" URL="../Sort 1D Array-VIM.vim"/>
-	<Item Name="Select Dialog.vi" Type="VI" URL="../Select Dialog.vi"/>
+	<Item Name="_shared" Type="Folder">
+		<Item Name="1D Array to String.vi" Type="VI" URL="../1D Array to String.vi"/>
+		<Item Name="String to 1D Array.vi" Type="VI" URL="../String to 1D Array.vi"/>
+		<Item Name="Delete Elements from Array-VIM.vim" Type="VI" URL="../Delete Elements from Array-VIM.vim"/>
+		<Item Name="Filter 1D Array-VIM.vim" Type="VI" URL="../Filter 1D Array-VIM.vim"/>
+		<Item Name="Remove Duplicates from 1D Array-VIM.vim" Type="VI" URL="../Remove Duplicates from 1D Array-VIM.vim"/>
+		<Item Name="Reorder 1D Array-VIM.vim" Type="VI" URL="../Reorder 1D Array-VIM.vim"/>
+		<Item Name="Search 1D Array-VIM.vim" Type="VI" URL="../Search 1D Array-VIM.vim"/>
+		<Item Name="Sort 1D Array-VIM.vim" Type="VI" URL="../Sort 1D Array-VIM.vim"/>
+		<Item Name="Select Dialog.vi" Type="VI" URL="../Select Dialog.vi"/>
+		<Item Name="Close Caller FP if In LabVIEW folder.vi" Type="VI" URL="../Close Caller FP if In LabVIEW folder.vi"/>
+	</Item>
+	<Item Name="subVIs" Type="Folder">
+		<Item Name="DownloadPackageFromNevstopFTP.vi" Type="VI" URL="../DownloadPackageFromNevstopFTP.vi"/>
+		<Item Name="FilterOthersExceptFile.vi" Type="VI" URL="../FilterOthersExceptFile.vi"/>
+		<Item Name="FilterOthersExceptDir.vi" Type="VI" URL="../FilterOthersExceptDir.vi"/>
+		<Item Name="relativeListResultToAbsolute.vi" Type="VI" URL="../relativeListResultToAbsolute.vi"/>
+		<Item Name="Sort descending by Version.vi" Type="VI" URL="../Sort descending by Version.vi"/>
+		<Item Name="splitFTPpathLeaf.vi" Type="VI" URL="../splitFTPpathLeaf.vi"/>
+		<Item Name="vipm_InstallPackages.vi" Type="VI" URL="../vipm_InstallPackages.vi"/>
+		<Item Name="vipm_target_version.vi" Type="VI" URL="../vipm_target_version.vi"/>
+		<Item Name="DownloadPackageFromFTP.vi" Type="VI" URL="../DownloadPackageFromFTP.vi"/>
+		<Item Name="vsc_InstallPackage.vi" Type="VI" URL="../vsc_InstallPackage.vi"/>
+	</Item>
 </Library>
