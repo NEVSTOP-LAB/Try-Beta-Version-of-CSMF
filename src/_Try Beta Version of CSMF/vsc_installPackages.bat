@@ -13,17 +13,29 @@ if not exist "%VSIX_PATH%" (
     exit /b 1
 )
 
-REM Try to locate code.cmd / code.exe
+REM Locate code.cmd with full absolute path
 set "CODE_CMD="
-for %%C in (code.cmd code) do (
-    where %%C >nul 2>&1
-    if not errorlevel 1 (
-        set "CODE_CMD=%%C"
+
+REM Try PATH lookup via where, capture the absolute path
+for /f "delims=" %%F in ('where code.cmd 2^>nul') do (
+    if not defined CODE_CMD set "CODE_CMD=%%F"
+)
+
+REM If not found, try common VS Code install locations
+if not defined CODE_CMD (
+    for %%D in (
+        "%LOCALAPPDATA%\Programs\Microsoft VS Code\bin\code.cmd"
+        "%ProgramFiles%\Microsoft VS Code\bin\code.cmd"
+        "%ProgramFiles(x86)%\Microsoft VS Code\bin\code.cmd"
+    ) do (
+        if exist %%D (
+            if not defined CODE_CMD set "CODE_CMD=%%D"
+        )
     )
 )
 
-if "%CODE_CMD%"=="" (
-    echo [ERROR] VS Code CLI 'code' not found in PATH. 1>&2
+if not defined CODE_CMD (
+    echo [ERROR] VS Code CLI 'code' not found in PATH or common install locations. 1>&2
     exit /b 1
 )
 
