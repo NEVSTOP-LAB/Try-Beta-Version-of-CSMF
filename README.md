@@ -4,6 +4,9 @@
 >[!IMPORTANT]
 > **Windows Only, as VIPM API required**
 
+>[!NOTE]
+> **This tool also installs the CSM VS Code support extension (`csm-vsc-support`) via `code --install-extension`. Make sure VS Code CLI (`code`) is available in your PATH.**
+
 Add Menu: `Tools >> Communicable State Machine(CSM) >> Try Beta Version of CSM...`
 ![image](https://github.com/user-attachments/assets/8fc6f42d-ca64-4b1a-88d7-cd91deb63e4f)
 
