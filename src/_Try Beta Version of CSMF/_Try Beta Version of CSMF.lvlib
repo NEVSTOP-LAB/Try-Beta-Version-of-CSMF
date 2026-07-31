@@ -35,5 +35,6 @@
 		<Item Name="vipm_target_version.vi" Type="VI" URL="../vipm_target_version.vi"/>
 		<Item Name="DownloadPackageFromFTP.vi" Type="VI" URL="../DownloadPackageFromFTP.vi"/>
 		<Item Name="vsc_InstallPackage.vi" Type="VI" URL="../vsc_InstallPackage.vi"/>
+		<Item Name="Explore to Local Folder.vi" Type="VI" URL="../Explore to Local Folder.vi"/>
 	</Item>
 </Library>
