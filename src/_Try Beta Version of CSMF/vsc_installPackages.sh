@@ -3,6 +3,13 @@
 # Linux/macOS 版 VSIX 安装脚本 —— 对应 vsc_installPackages.bat
 # 用法: ./vsc_installPackages.sh <path-to-vsix>
 #
+# ---- CRLF 兼容性保护（自愈）----
+# 若本文件被以 Windows 行尾（CRLF，\r\n）保存，bash 会把每行末尾的 \r 当作普通
+# 字符，导致 set -u、then/fi 等关键字及行尾续行符（\）解析出错。因此这里必须在
+# set -u 之前、且以 # 结尾（保证 \r 落入注释被忽略）的单行内完成检测与自愈：
+# 检测到 CRLF 时，自动去除所有 \r 生成临时副本并重新执行本脚本。
+# 这样无论文件是 LF 还是 CRLF 行尾，脚本都能正常运行。
+if LC_ALL=C grep -q $'\r' "$0" 2>/dev/null; then _t="${TMPDIR:-/tmp}/vsc_install_$$.sh"; tr -d '\r' <"$0" >"$_t"; chmod +x "$_t"; bash "$_t" "$@"; _rc=$?; rm -f "$_t"; exit $_rc; fi #
 set -u
 
 VSIX_PATH="${1:-}"
