@@ -29,8 +29,8 @@
     </Custom_Action_VIs>
     <VI_Package_Configuration_File>Try Beta Version of CSMF.vipc</VI_Package_Configuration_File>
     <Description>
-      <One_Line_Description_Summary>This tool is used to install beta version of CSM framework automatically, you need to activate VIPM to community/pro version firstly.</One_Line_Description_Summary>
-      <Description>Windows Only, as VIPM API required.</Description>
+      <One_Line_Description_Summary>This tool downloads the latest beta version of CSM framework; on Windows it installs automatically via VIPM (Windows Only), on Linux/macOS it only downloads to a local folder for manual installation.</One_Line_Description_Summary>
+      <Description>On Windows, packages are installed automatically via VIPM API (Windows Only). On Linux/macOS, packages are only downloaded to a local folder and must be installed manually. VSIX installation (csm-vsc-support) supports Windows, Linux and macOS via vsc_installPackages.bat / vsc_installPackages.sh.</Description>
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
