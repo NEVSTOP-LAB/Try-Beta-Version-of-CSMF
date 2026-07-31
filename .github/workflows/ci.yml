@@ -1,10 +1,11 @@
-# This is a basic workflow to help you get started with Actions
+# Combined CI workflow: check for broken VIs first, then build the VIPM library
+# The build job only runs after the broken VIs check succeeds (via `needs`).
 
-name: Build_VIPM_Library
+name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
+  # Triggers the workflow on pull request events for the main branch
   pull_request:
     branches:
       - main
@@ -13,20 +14,48 @@ on:
   push:
     paths-ignore:
       - '**.md'
+      - '**.txt'
+      - '**.drawio'
+      - '**.vipb'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  Build_VIPM_Library:
+  # Check that no VIs are broken before building
+  Check_Broken_VIs:
     # The type of runner that the job will run on
     runs-on: [self-hosted, lv2017]
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
 
+      - name: vipm-InstallPackage
+        uses: NEVSTOP-LAB/vipm-InstallPackage@main
+        with:
+          LabVIEW_Version: 2017
+          # Package could be PackageName/PacakgeWithVersion/vipFilePath
+          Package: "VIPM API"
+
+      # Runs a set of commands using the runners shell
+      - id: Check_Broken_VIs
+        uses: LV-APT/lvCICD@main
+        with:
+          LabVIEW_Version: 2017
+          Operation: VIAn_CheckBrokenVIs
+          Parameter1: ${{ github.workspace }}
+          Parameter2: NOPASSWORD
+          Parameter3: YES
+          Parameter4: -placeContent
+
+  # Build the VIPM library only after the broken VIs check has succeeded
+  Build_VIPM_Library:
+    needs: Check_Broken_VIs
+    # The type of runner that the job will run on
+    runs-on: [self-hosted, lv2017]
+
+    steps:
       # Get env variables
       # https://github.com/marketplace/actions/github-environment-variables-action
       - uses: FranzDiebold/github-env-vars-action@v2.8.0
@@ -71,4 +100,3 @@ jobs:
           secure: false
           server_dir: /${{ env.CI_REPOSITORY_OWNER_SLUG }}/${{ env.CI_REPOSITORY_NAME }}/${{ env.CI_ACTION_REF_NAME }}/
           local_dir: ./vip/
-
